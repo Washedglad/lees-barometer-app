@@ -16,7 +16,21 @@ const Sidebar = ({ activeTab, onTabChange }) => {
   return (
     <aside className="sidebar">
       <div className="sidebar-header">
-        <FaAnchor className="logo-icon" />
+        <div className="profile-section">
+          <img 
+            src="/assets/lee-marchman.jpg" 
+            alt="Lee Marchman" 
+            className="profile-photo"
+            onError={(e) => {
+              e.target.style.display = 'none';
+              e.target.nextElementSibling.style.display = 'flex';
+            }}
+          />
+          <div className="profile-placeholder">
+            <FaAnchor className="placeholder-icon" />
+            <span className="placeholder-text">Lee Marchman</span>
+          </div>
+        </div>
         <h1 className="sidebar-title">Lee's<br/>Barometer<br/>Reading App</h1>
       </div>
       
@@ -48,7 +62,7 @@ const Sidebar = ({ activeTab, onTabChange }) => {
         </a>
         
         <div className="signature">
-          Made with ⚓ by <strong>Avery</strong>
+          Made by <strong>Avery</strong>
         </div>
       </div>
     </aside>

@@ -1,0 +1,46 @@
+══════════════════════════════════════════════════════════
+ADD LEE MARCHMAN'S PHOTO HERE
+══════════════════════════════════════════════════════════
+
+INSTRUCTIONS:
+1. Get a photo of Lee Marchman (headshot/portrait works best)
+2. Rename the photo to: lee-marchman.jpg
+3. Place it in this folder: public/assets/
+4. Recommended specs:
+   - Format: JPG or PNG
+   - Size: 300x300 pixels minimum (square)
+   - File size: Under 500KB
+   - Good lighting and clear face
+
+WHAT IT LOOKS LIKE:
+- Round photo (120px diameter) in sidebar header
+- Border with nautical blue color
+- Hover effect (scales slightly larger)
+- Above the "Lee's Barometer Reading App" title
+
+IF NO PHOTO IS ADDED:
+- App will show a placeholder with anchor icon
+- Says "Lee Marchman" in text
+- Still looks professional
+- Photo can be added later
+
+EASY PHOTO PREPARATION:
+1. Find/take photo of Lee Marchman
+2. Crop to square (same width & height)
+3. Save as: lee-marchman.jpg
+4. Copy to: lees-barometer-app/public/assets/
+
+THEN:
+- Refresh app (Ctrl+R or Cmd+R)
+- Photo appears automatically!
+
+══════════════════════════════════════════════════════════
+
+CURRENT STATUS: 
+☐ Waiting for photo to be added
+
+Once added, delete this file or rename to:
+✓ PHOTO_ADDED.txt
+
+══════════════════════════════════════════════════════════
+
