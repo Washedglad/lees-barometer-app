@@ -18,7 +18,7 @@ const Sidebar = ({ activeTab, onTabChange, isOpen }) => {
       <div className="sidebar-header">
         <div className="profile-section">
           <img 
-            src="/assets/lee-marchman.jpg" 
+            src={`${process.env.PUBLIC_URL}/assets/lee-marchman.jpg`}
             alt="Lee Marchman" 
             className="profile-photo"
             onError={(e) => {
