@@ -1,0 +1,117 @@
+╔═══════════════════════════════════════════════════════════╗
+║                                                           ║
+║     LEE'S BAROMETER & CALIBRATION HELPER                  ║
+║     Ship Log - Version 1.0                                ║
+║                                                           ║
+║     A Nautical-Themed Scientific Instrument App           ║
+║                                                           ║
+╚═══════════════════════════════════════════════════════════╝
+
+FIRST TIME SETUP - 3 EASY STEPS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 1: Install Node.js
+   └─ Download from: https://nodejs.org/
+   └─ Choose the LTS (Long Term Support) version
+   └─ Run installer and restart computer
+
+STEP 2: Install Application
+   
+   WINDOWS:
+   └─ Double-click: install.bat
+   
+   MAC/LINUX:
+   └─ Open Terminal
+   └─ Run: chmod +x install.sh && ./install.sh
+
+STEP 3: Run Application
+   
+   WINDOWS:
+   └─ Double-click: run.bat
+   
+   MAC/LINUX:
+   └─ Run: chmod +x run.sh && ./run.sh
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+QUICK REFERENCE:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📖 Documentation:
+   ├─ QUICKSTART.md          ← Start here for fastest setup
+   ├─ INSTALLATION_GUIDE.md  ← Detailed installation help
+   ├─ USAGE_GUIDE.md         ← How to use each feature
+   ├─ README.md              ← Complete documentation
+   └─ PROJECT_SUMMARY.md     ← Technical overview
+
+🔧 Scripts:
+   ├─ install.bat / .sh      ← Install dependencies
+   ├─ run.bat / .sh          ← Start application
+   └─ build.bat / .sh        ← Build standalone installer
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FEATURES:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚓ Barometric Pressure Converter
+   └─ Convert mmHg ↔ inHg ↔ hPa ↔ PSI
+
+💧 Dissolved Oxygen Tool
+   └─ Calculate DO saturation with environmental corrections
+
+🧪 pH Calibration Helper
+   └─ Step-by-step probe calibration with slope calculation
+
+📊 Calibration Data Logger
+   └─ Save and export measurements to CSV
+
+🎨 Beautiful nautical blue theme with sound effects!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TROUBLESHOOTING:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Problem: "npm: command not found"
+Solution: Install Node.js from https://nodejs.org/
+
+Problem: "Cannot find module"
+Solution: Run install.bat (Windows) or ./install.sh (Mac/Linux)
+
+Problem: Application window is blank
+Solution: Wait 10 seconds. If still blank, check for errors in
+          terminal and try reinstalling dependencies.
+
+Problem: Port 3000 already in use
+Solution: Close other Node.js/React applications or restart PC.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+MANUAL COMMANDS (if scripts don't work):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Install:     npm install
+Run:         npm run electron:dev
+Build:       npm run electron:build:win     (Windows)
+             npm run electron:build:mac     (macOS)
+             npm run electron:build:linux   (Linux)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SYSTEM REQUIREMENTS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Operating System:  Windows 10+, macOS 10.14+, Linux (Ubuntu 18.04+)
+RAM:               4GB minimum, 8GB recommended
+Disk Space:        500MB for development, 200MB for built app
+Node.js:           v16.0.0 or higher
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚓ Ready to start? Follow the 3 steps above!
+
+For detailed help, open QUICKSTART.md
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+

@@ -1,0 +1,64 @@
+ICON FILE INSTRUCTIONS
+======================
+
+The application uses icon.svg as the source icon file.
+
+For the Electron build process, you need a PNG version of the icon.
+
+OPTION 1: Generate PNG from SVG
+--------------------------------
+Use an online converter or command-line tool:
+
+Online:
+- Go to https://cloudconvert.com/svg-to-png
+- Upload icon.svg
+- Convert to 512x512 PNG
+- Save as icon.png in this folder
+
+Command Line (ImageMagick):
+- Install ImageMagick: https://imagemagick.org/
+- Run: convert icon.svg -resize 512x512 icon.png
+
+Command Line (Inkscape):
+- Install Inkscape: https://inkscape.org/
+- Run: inkscape icon.svg --export-type=png --export-filename=icon.png --export-width=512
+
+OPTION 2: Use Alternative Icon
+-------------------------------
+If you have your own icon:
+1. Prepare a 512x512 PNG image
+2. Name it icon.png
+3. Place it in this folder (public/assets/)
+
+OPTION 3: Simple Placeholder
+-----------------------------
+For testing purposes, you can use any 512x512 PNG image
+temporarily until you create the final icon.
+
+Icon Requirements:
+------------------
+- Format: PNG
+- Size: 512x512 pixels recommended (minimum 256x256)
+- Transparent background recommended
+- Should work on both light and dark backgrounds
+- Simple, recognizable design (anchor, ship wheel, compass, etc.)
+
+Current Status:
+---------------
+The icon.svg file is provided. You need to convert it to icon.png
+before building the application.
+
+The app will work in development mode without the PNG, but
+the build process may show warnings.
+
+Quick Fix for Building:
+-----------------------
+If you need to build immediately and don't have a PNG:
+1. Find any nautical-themed icon online (anchor, wheel, etc.)
+2. Download as 512x512 PNG
+3. Rename to icon.png
+4. Place in this folder
+
+The SVG is vector-based and can be scaled to any size without
+loss of quality, making it ideal for conversion to PNG.
+

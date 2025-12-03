@@ -1,0 +1,23 @@
+PACKAGE-LOCK.JSON INFORMATION
+==============================
+
+The package-lock.json file will be automatically generated when you run:
+    npm install
+
+This file locks the versions of all dependencies to ensure consistent
+installations across different machines.
+
+You do NOT need to create this file manually.
+
+When you run the install script (install.bat or install.sh), npm will:
+1. Read package.json
+2. Download all required packages
+3. Generate package-lock.json automatically
+4. Create the node_modules folder
+
+If you ever need to regenerate it:
+    rm -rf node_modules package-lock.json
+    npm install
+
+This is normal and expected!
+

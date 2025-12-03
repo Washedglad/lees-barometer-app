@@ -1,0 +1,116 @@
+.app {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #E6F3FF 0%, #B8D9F5 100%);
+}
+
+/* Ocean Background Animation */
+.ocean-bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path d="M0,50 Q300,80 600,50 T1200,50 L1200,120 L0,120 Z" fill="%231F4D73" opacity="0.03"/></svg>');
+  background-size: 50% 100%;
+  animation: wave-animation 15s linear infinite;
+}
+
+.wave1 {
+  animation-duration: 15s;
+  opacity: 0.03;
+}
+
+.wave2 {
+  animation-duration: 20s;
+  opacity: 0.02;
+  animation-delay: -5s;
+}
+
+.wave3 {
+  animation-duration: 25s;
+  opacity: 0.02;
+  animation-delay: -10s;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Compass Watermark */
+.compass-watermark {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Main Container */
+.app-container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+/* Main Content Area */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.content-wrapper {
+  flex: 1;
+  overflow-y: auto;
+  padding: 30px;
+}
+
+/* Footer */
+.app-footer {
+  padding: 12px 30px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border-top: 2px solid #1F4D73;
+  color: #1F4D73;
+  font-size: 13px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content-wrapper {
+    padding: 20px;
+  }
+  
+  .compass-watermark {
+    width: 60px;
+    height: 60px;
+  }
+}
+
