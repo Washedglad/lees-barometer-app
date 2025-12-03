@@ -1,10 +1,10 @@
 {
-  "name": "lees-barometer-calibration-helper",
+  "name": "lees-barometer-reading-app",
   "version": "1.0.0",
-  "description": "Lee's Barometer & Calibration Helper - A nautical-themed scientific instrument application",
+  "description": "Lee's Barometer Reading App - A nautical-themed scientific instrument application",
   "main": "public/electron.js",
   "homepage": "./",
-  "author": "Lee's Barometer",
+  "author": "Avery Pollard",
   "license": "MIT",
   "scripts": {
     "start": "react-scripts start",

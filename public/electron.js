@@ -4,9 +4,9 @@ const isDev = require('electron-is-dev');
 
 function createWindow() {
   const mainWindow = new BrowserWindow({
-    width: 1200,
+    width: 1280,
     height: 800,
-    minWidth: 900,
+    minWidth: 1000,
     minHeight: 600,
     icon: path.join(__dirname, 'assets/icon.png'),
     webPreferences: {
@@ -15,6 +15,7 @@ function createWindow() {
       enableRemoteModule: true
     },
     backgroundColor: '#E6F3FF',
+    title: "Lee's Barometer Reading App",
     show: false
   });
 

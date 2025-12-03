@@ -1,6 +1,6 @@
 import React from 'react';
 import './Sidebar.css';
-import { FaAnchor, FaTint, FlaskIcon, FaBook } from 'react-icons/fa';
+import { FaAnchor, FaTint, FaBook, FaStickyNote, FaExternalLinkAlt } from 'react-icons/fa';
 import { GiSpeedometer } from 'react-icons/gi';
 import { MdWaterDrop } from 'react-icons/md';
 
@@ -9,6 +9,7 @@ const Sidebar = ({ activeTab, onTabChange }) => {
     { id: 'barometer', icon: GiSpeedometer, label: 'Barometer' },
     { id: 'oxygen', icon: MdWaterDrop, label: 'Dissolved O₂' },
     { id: 'ph', icon: FaTint, label: 'pH Calibration' },
+    { id: 'notes', icon: FaStickyNote, label: 'Field Notes' },
     { id: 'logger', icon: FaBook, label: 'Data Logger' }
   ];
 
@@ -16,7 +17,7 @@ const Sidebar = ({ activeTab, onTabChange }) => {
     <aside className="sidebar">
       <div className="sidebar-header">
         <FaAnchor className="logo-icon" />
-        <h1 className="sidebar-title">Lee's<br/>Barometer</h1>
+        <h1 className="sidebar-title">Lee's<br/>Barometer<br/>Reading App</h1>
       </div>
       
       <nav className="sidebar-nav">
@@ -35,8 +36,20 @@ const Sidebar = ({ activeTab, onTabChange }) => {
         })}
       </nav>
       
-      <div className="sidebar-decoration">
-        <div className="rope-line"></div>
+      <div className="sidebar-footer">
+        <a 
+          href="https://www.fieldenvironmental.com/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="field-environmental-link"
+        >
+          <FaExternalLinkAlt className="link-icon" />
+          <span>Field Environmental</span>
+        </a>
+        
+        <div className="signature">
+          Made with ⚓ by <strong>Avery</strong>
+        </div>
       </div>
     </aside>
   );

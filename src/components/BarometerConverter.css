@@ -558,6 +558,149 @@ tbody tr:hover {
   font-weight: 600;
 }
 
+/* Notes Styling */
+.notes-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.textarea-field {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #B8D9F5;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  resize: vertical;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.textarea-field:focus {
+  outline: none;
+  border-color: #1F4D73;
+  box-shadow: 0 0 0 3px rgba(31, 77, 115, 0.1);
+}
+
+.button-row {
+  display: flex;
+  gap: 10px;
+}
+
+.button-row .btn-primary,
+.button-row .btn-secondary {
+  flex: 1;
+}
+
+.notes-list-header {
+  margin: 30px 0 20px 0;
+}
+
+.notes-list-header h3 {
+  color: #1F4D73;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.note-card {
+  background: white;
+  border-left: 4px solid #1F4D73;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  min-height: 150px;
+}
+
+.note-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(31, 77, 115, 0.2);
+  border-left-color: #2A6A9F;
+}
+
+.note-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #E6F3FF;
+}
+
+.note-title {
+  color: #1F4D73;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  flex: 1;
+  word-break: break-word;
+}
+
+.note-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  color: #666;
+}
+
+.icon-button:hover {
+  background: #E6F3FF;
+  transform: scale(1.1);
+}
+
+.edit-button:hover {
+  color: #2A6A9F;
+}
+
+.delete-button:hover {
+  color: #dc3545;
+  background: #ffe6e6;
+}
+
+.note-content {
+  flex: 1;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.note-content p {
+  margin: 5px 0;
+}
+
+.note-footer {
+  padding-top: 10px;
+  border-top: 1px solid #E6F3FF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.note-date {
+  font-size: 12px;
+  color: #666;
+  font-style: italic;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .feature-header h2 {
@@ -587,6 +730,14 @@ tbody tr:hover {
   
   .location-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .notes-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .button-row {
+    flex-direction: column;
   }
 }
 

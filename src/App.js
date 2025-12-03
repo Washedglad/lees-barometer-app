@@ -4,8 +4,9 @@ import Sidebar from './components/Sidebar';
 import BarometerConverter from './components/BarometerConverter';
 import DOCorrection from './components/DOCorrection';
 import PhCalibration from './components/PhCalibration';
+import Notes from './components/Notes';
 import DataLogger from './components/DataLogger';
-import { playBoatHorn, playWaterClick } from './utils/soundEffects';
+import { playWaterClick } from './utils/soundEffects';
 
 function App() {
   const [activeTab, setActiveTab] = useState('barometer');
@@ -52,6 +53,7 @@ function App() {
             {activeTab === 'barometer' && <BarometerConverter addLogEntry={addLogEntry} />}
             {activeTab === 'oxygen' && <DOCorrection addLogEntry={addLogEntry} />}
             {activeTab === 'ph' && <PhCalibration addLogEntry={addLogEntry} />}
+            {activeTab === 'notes' && <Notes />}
             {activeTab === 'logger' && <DataLogger logData={logData} />}
           </div>
           
