@@ -64,6 +64,69 @@
   pointer-events: none;
 }
 
+/* Mobile Menu Button */
+.mobile-menu-button {
+  display: none;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 1001;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #1F4D73 0%, #2A6A9F 100%);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  box-shadow: 0 4px 15px rgba(31, 77, 115, 0.4);
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-button span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-button.open span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.mobile-menu-button.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-button.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.mobile-menu-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(31, 77, 115, 0.5);
+}
+
+.mobile-menu-button:active {
+  transform: scale(0.95);
+}
+
+/* Sidebar Overlay */
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  backdrop-filter: blur(2px);
+}
+
 /* Main Container */
 .app-container {
   position: relative;
@@ -102,15 +165,47 @@
   gap: 8px;
 }
 
-/* Responsive Design */
+/* Tablet Optimization */
+@media (max-width: 1024px) {
+  .app-container {
+    flex-direction: column;
+  }
+}
+
+/* Mobile Optimization */
 @media (max-width: 768px) {
+  .mobile-menu-button {
+    display: flex;
+  }
+  
+  .sidebar-overlay {
+    display: block;
+  }
+  
   .content-wrapper {
-    padding: 20px;
+    padding: 80px 15px 20px 15px;
   }
   
   .compass-watermark {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
+    top: 80px;
+  }
+  
+  .app-footer {
+    padding: 10px 15px;
+    font-size: 11px;
+  }
+}
+
+/* Extra Small Phones */
+@media (max-width: 480px) {
+  .content-wrapper {
+    padding: 70px 10px 15px 10px;
+  }
+  
+  .compass-watermark {
+    display: none;
   }
 }
 

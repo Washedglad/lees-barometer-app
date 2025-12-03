@@ -11,10 +11,17 @@ import { playWaterClick } from './utils/soundEffects';
 function App() {
   const [activeTab, setActiveTab] = useState('barometer');
   const [logData, setLogData] = useState([]);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const handleTabChange = (tab) => {
     playWaterClick();
     setActiveTab(tab);
+    setSidebarOpen(false); // Close sidebar on mobile after selecting
+  };
+
+  const toggleSidebar = () => {
+    playWaterClick();
+    setSidebarOpen(!sidebarOpen);
   };
 
   const addLogEntry = (entry) => {
@@ -46,7 +53,30 @@ function App() {
       </div>
 
       <div className="app-container">
-        <Sidebar activeTab={activeTab} onTabChange={handleTabChange} />
+        {/* Mobile Menu Button */}
+        <button 
+          className={`mobile-menu-button ${sidebarOpen ? 'open' : ''}`}
+          onClick={toggleSidebar}
+          aria-label="Toggle menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        {/* Overlay for mobile */}
+        {sidebarOpen && (
+          <div 
+            className="sidebar-overlay" 
+            onClick={() => setSidebarOpen(false)}
+          />
+        )}
+
+        <Sidebar 
+          activeTab={activeTab} 
+          onTabChange={handleTabChange}
+          isOpen={sidebarOpen}
+        />
         
         <main className="main-content">
           <div className="content-wrapper">

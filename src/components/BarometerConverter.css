@@ -701,22 +701,92 @@ tbody tr:hover {
   font-style: italic;
 }
 
-/* Responsive Design */
+/* Touch-Friendly Improvements */
+@media (hover: none) and (pointer: coarse) {
+  /* Touch devices */
+  .btn-primary,
+  .btn-secondary {
+    min-height: 50px;
+    font-size: 16px;
+  }
+  
+  .input-field,
+  .select-field,
+  .textarea-field {
+    min-height: 50px;
+    font-size: 16px;
+  }
+  
+  .icon-button {
+    min-width: 44px;
+    min-height: 44px;
+    font-size: 20px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .feature-container {
+    max-width: 100%;
+  }
+  
+  .card {
+    padding: 25px;
+  }
+  
+  .results-grid,
+  .input-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+/* Mobile */
 @media (max-width: 768px) {
+  .feature-header {
+    margin-bottom: 20px;
+  }
+  
   .feature-header h2 {
-    font-size: 22px;
+    font-size: 20px;
+  }
+  
+  .feature-icon {
+    font-size: 28px;
   }
   
   .card {
     padding: 20px;
+    margin-bottom: 15px;
   }
   
   .input-grid {
     grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .input-field,
+  .select-field {
+    font-size: 16px;
+    padding: 14px 16px;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    padding: 16px 20px;
+    font-size: 16px;
   }
   
   .results-grid {
     grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .result-item {
+    padding: 16px;
+  }
+  
+  .result-value {
+    font-size: 20px;
   }
   
   .log-body {
@@ -738,6 +808,55 @@ tbody tr:hover {
   
   .button-row {
     flex-direction: column;
+  }
+  
+  .textarea-field {
+    font-size: 15px;
+  }
+  
+  table {
+    font-size: 13px;
+  }
+  
+  th, td {
+    padding: 10px 8px;
+  }
+}
+
+/* Extra Small Phones */
+@media (max-width: 480px) {
+  .feature-header h2 {
+    font-size: 18px;
+  }
+  
+  .card {
+    padding: 15px;
+  }
+  
+  .results-grid {
+    gap: 10px;
+  }
+  
+  .result-item {
+    padding: 12px;
+  }
+  
+  table {
+    font-size: 12px;
+  }
+  
+  th, td {
+    padding: 8px 6px;
+  }
+  
+  .note-card {
+    min-height: 120px;
+  }
+  
+  .procedure-list,
+  .reminder-box ul {
+    padding-left: 15px;
+    font-size: 14px;
   }
 }
 

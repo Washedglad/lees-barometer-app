@@ -4,7 +4,7 @@ import { FaAnchor, FaTint, FaBook, FaStickyNote, FaExternalLinkAlt } from 'react
 import { GiSpeedometer } from 'react-icons/gi';
 import { MdWaterDrop } from 'react-icons/md';
 
-const Sidebar = ({ activeTab, onTabChange }) => {
+const Sidebar = ({ activeTab, onTabChange, isOpen }) => {
   const menuItems = [
     { id: 'barometer', icon: GiSpeedometer, label: 'Barometer' },
     { id: 'oxygen', icon: MdWaterDrop, label: 'Dissolved O₂' },
@@ -14,7 +14,7 @@ const Sidebar = ({ activeTab, onTabChange }) => {
   ];
 
   return (
-    <aside className="sidebar">
+    <aside className={`sidebar ${isOpen ? 'open' : ''}`}>
       <div className="sidebar-header">
         <div className="profile-section">
           <img 
